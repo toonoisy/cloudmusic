@@ -1,0 +1,16 @@
+.header .title {
+  color:#666;
+  font-size:28rpx;
+}
+
+.header .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .content .more {
+  font-size: 24rpx;
+  border: 1px solid #666;
+  padding: 4rpx 10rpx;
+  border-radius: 20rpx;
+}

@@ -1,0 +1,104 @@
+.indexContainer image {
+  width: 100%;
+  height: 100%;
+}
+
+.indexContainer .nav {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.indexContainer .nav view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.indexContainer .nav .iconfont {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 50rpx;
+  color: white;
+  background: rgb(240, 19, 19);
+  border-radius: 50%;
+}
+
+.indexContainer .nav text {
+  margin-top: 20rpx;
+  font-size:28rpx;
+}
+
+.recommendContainer {
+  padding: 20rpx;
+  margin-bottom: 50rpx;
+}
+
+.recommendContainer .recommendScroll {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  height: 300rpx;
+}
+
+.recommendContainer .recommendItem {
+  width: 220rpx;
+  margin-right: 20rpx;
+}
+
+.recommendContainer .recommendItem image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+
+.recommendContainer .recommendItem text {
+  /* 开启webkit内核盒模式 */
+  display: -webkit-box;
+  /* 设置几行之后文本溢出 */
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  /* 设置文本排列方向 */
+  -webkit-box-orient: vertical;
+}
+
+.ranking {
+  padding: 20rpx;
+}
+
+.ranking .rankingSwiper {
+  height: 450rpx;
+}
+
+.ranking .rankingSwiper .rankingTitle {
+  font-size: 24rpx;
+  padding-bottom: 20rpx;
+  margin-right: 20rpx;
+  background: #fbfbfb;
+}
+
+.ranking .rankingSwiper .rankingItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx;
+  margin-right: 20rpx;
+  background: #fbfbfb;
+} 
+
+.ranking .rankingSwiper .rankingItem image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+}
+
+.ranking .rankingSwiper .rankingItem .title {
+  white-space: nowrap;
+  /* 设置文本溢出时显示什么 */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 400rpx;
+  text-align: left;
+}

@@ -1,0 +1,38 @@
+<view class="videoContainer">
+  <view class="header">
+    <image src="/static/images/video/video.jpg"></image>
+    <input type="text" placeholder="KNOCK KNOCK" placeholder-class="placeholder" class="search"></input>
+    <image src="/static/images/logo.png"></image>
+  </view>
+  <!-- scroll-into-view 的id不能以数字开头 -->
+  <scroll-view class="nav" enable-flex scroll-x scroll-into-view='nid{{currentId}}' scroll-with-animation>
+    <view class="navItem {{currentId === item.id? 'active' : ''}}" wx:for="{{navList}}" wx:key='id' data-id='{{item.id}}' id='nid{{item.id}}' bindtap="changeId">{{item.name}}</view>
+  </scroll-view>
+
+  <!-- videoList区域 -->
+  <scroll-view class="videoList" scroll-y refresher-enabled refresher-triggered='{{trigger}}' bindrefresherrefresh='refresherRefresh' bindscrolltolower='scrollToLower'>
+    <view class="videoItem" wx:for="{{videoList}}" wx:key='vid'>
+      <!-- bindplay='handlePlay' -->
+      <video class="common" src="{{item.data.urlInfo.url}}" id='{{item.data.vid}}' poster='{{item.data.coverUrl}}' wx:if="{{playId === item.data.vid}}"></video>
+      <image class="common" src="{{item.data.coverUrl}}" id='{{item.data.vid}}' bindtap="changePlayId" wx:else></image>
+      <view class="content">{{item.data.title}}</view>
+      <view class="footer">
+        <image class="avatar" src="{{item.data.creator.avatarUrl}}"></image>
+        <text class="nickName">{{item.data.creator.nickname}}</text>
+        <view class="comments_praised">
+          <text class="item">
+            <text class="iconfont icon-buoumaotubiao15"></text>
+            <text class="count">{{item.data.shareCount}}</text>
+          </text>
+          <text class="item">
+            <text class="iconfont icon-pinglun1"></text>
+            <text class="count">{{item.data.commentCount}}</text>
+          </text>
+          <button class="item btn" open-type="share" data-title='{{item.data.title}}' data-coverUrl='{{item.data.coverUrl}}'>
+            <text class="iconfont icon-gengduo"></text>
+          </button>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

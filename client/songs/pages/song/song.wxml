@@ -1,0 +1,28 @@
+<view class="songContainer {{isPlaying? 'playing' : ''}}">
+  <text class="artist">{{songObj.ar[0].name}}</text>
+  <view class="circle"></view>
+  <image src="/static/images/song/needle.png" class="needle"></image>
+  <view class="discContainer">
+    <image src="/static/images/song/disc.png" class="disc"></image>
+    <image src="{{songObj.al.picUrl}}" class="cover"></image>
+  </view>
+
+  <view class="progressBar">
+    <text>{{curTime}}</text>
+    <view class="barContainer">
+      <view class="curBar" style="width:{{curWidth}}%">
+        <view class="pointer"></view>
+      </view>
+    </view>
+    <text>{{duration}}</text>
+  </view>
+
+  <!-- 底部播放选项区域 -->
+  <view class="musicControl">
+    <text class="iconfont icon-iconsMusicyemianbofangmoshiShuffle" ></text>
+    <text class="iconfont icon-shangyishou" bindtap="switchSong" id="pre"></text>
+    <text class="iconfont {{isPlaying?'icon-zanting':'icon-bofang'}} big" bindtap="handlePlay"></text>
+    <text class="iconfont icon-next" bindtap="switchSong" id="next"></text>
+    <text class="iconfont icon-iconsMusicyemianbofangmoshiPlayList"></text>
+  </view>
+</view>

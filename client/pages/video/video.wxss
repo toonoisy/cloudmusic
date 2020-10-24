@@ -1,0 +1,115 @@
+.videoContainer {
+  padding: 10rpx 10rpx 0 10rpx;
+}
+
+.videoContainer .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.videoContainer .header image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.videoContainer .header .search {
+  flex-grow: 1;
+  border: 1px solid #eee;
+  margin: 0 10rpx;
+}
+
+.videoContainer .header .placeholder {
+  text-align: center;
+  color: red;
+  font-size: 28rpx;
+}
+
+.videoContainer .nav {
+  padding: 0 10rpx;
+  display: flex;
+  white-space: nowrap;
+  height: 100rpx;
+}
+.videoContainer .nav .navItem {
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-right: 40rpx;
+}
+
+.videoContainer .nav .navItem.active {
+  border-bottom: 1px solid red;
+}
+
+.videoList .common {
+  width: 100%;
+  /* 视频比例 1920 * 1080 */
+  /* 94vw * 1080 / 1920 = 52.875vw */
+  height: calc(52.875vw - 11.25rpx);
+  border-radius: 10rpx;
+}
+
+.videoList .videoItem{
+  padding:3%;
+  padding-bottom:0;
+}
+
+
+.videoList{
+  padding-top:40rpx;
+  /* 屏幕高度 - header - nav - 各种padding */
+  height: calc(100vh - 100rpx - 60rpx - 40rpx - 10rpx);
+}
+
+.videoList .content {
+  font-size: 26rpx;
+  height:80rpx;
+  line-height: 80rpx;
+  max-width: 500rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* footer */
+.footer {
+  border-top: 1rpx solid #eee;
+  padding: 20rpx 0;
+}
+.footer .avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.footer  .nickName {
+  font-size: 26rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
+
+.footer .comments_praised {
+  float: right;
+}
+.comments_praised .btn {
+  display: inline;
+  padding: 0;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.comments_praised .btn:after {
+  border: none;
+}
+
+.comments_praised .item {
+  margin-left: 50rpx;
+  position: relative;
+}
+
+.comments_praised .item .count {
+  position: absolute;
+  top: -20rpx;
+  font-size: 20rpx;
+}
